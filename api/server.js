@@ -1,17 +1,23 @@
 const express = require('express');
 
+const cors = require('cors')
+const morgan = require('morgan')
+
+const { loggerP } = require('./projects/projects-middleware')
+const { loggerA } = require('./actions/actions-middlware')
+
 const projectRouter = require('./projects/projects-router')
 const actionsRouter = require('./actions/actions-router')
+
 const server = express();
 
 server.use(express.json())
 
 server.use('/api/projects', projectRouter)
 server.use('/api/actions', actionsRouter)
-
-// Configure your server here
-// Build your actions router in /api/actions/actions-router.js
-// Build your projects router in /api/projects/projects-router.js
-// Do NOT `server.listen()` inside this file!
+server.use(cors())
+server.use(morgan('dev'))
+server.use(loggerP)
+server.use(loggerA)
 
 module.exports = server;

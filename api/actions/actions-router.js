@@ -1,7 +1,7 @@
 const express = require('express')
 const { checkActionID, checkActionPayload } = require('./actions-middlware')
-const Actions = require('./actions-model')
 
+const Actions = require('./actions-model')
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
