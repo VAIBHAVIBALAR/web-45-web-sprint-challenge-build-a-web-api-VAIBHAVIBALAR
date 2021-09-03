@@ -17,7 +17,9 @@ function checkProjectID(req, res, next) {
 }
 
 function checkProjectPayload(req, res, next) {
-    if(!req.body.name || !req.body.description){
+    if(!req.body.name || 
+        !req.body.description ||
+        req.body.completed == null){
         next({ status: 400, message: 'project name and description must be given'})
     }else {
         next()
