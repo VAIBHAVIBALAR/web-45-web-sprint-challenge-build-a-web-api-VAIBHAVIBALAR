@@ -147,7 +147,25 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+   Node.js is an open-source, cross-platform runtime environment that allows developers to create all kinds of server-side tools and applications in JavaScript.
+   Node was designed to optimize throughput and scalability in web applications and is a good solution for many coomon web-development problems.
+   Express is the most popular Node web framework, and is the underlying library for a number of other popular Node web framework
+   Express helps add additional processing "middleware" at any point within the request handling pipeline
+  
 1. Understand and explain the use of Middleware.
+
+   Middleware is used extensively in Express apps, for tasks from serving static files to error handling, to compressing HTTP responses.
+
 1. The basic principles of the REST architectural style.
+
+   REST stands for Representational State Transfer and API stands for Application Program Interface. REST architectural style defines the set of rules to be used for creating web services. It allows requesting systems to access and manipulate web ewsources by using a uniform and predefined set of rules.
+
 1. Understand and explain the use of Express Routers.
+
+   Express Routers is used to create a new router object. This function is used when we want to  create a new router object in a program to handle requests.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+   Most commonly used are postmen and HTTPie
+  
